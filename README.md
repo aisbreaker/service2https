@@ -19,10 +19,16 @@ Internally, these technologies are used:
 Preconditions
 -------------
 What we need before we start:
-* the service build as Docker image/OCI image
-* a Internet-connected machine/VM with public IP address and open ports 80 and 443,
-  plus shell access, usually with ssh/port 22
+* the service available as Docker image/OCI image
+* an Internet-connected machine/VM with public IP address and open ports 80 and 443,
+  plus shell access, usually with ssh/port 22 (no extra load balancer is needed)
 * a domain name (e.g. demo.example.com) mapped to this IP address
+
+
+Limitations
+-----------
+* it's intended for a single machine/VM per domain setup, i.e. for test and experimental use only
+  * for multiserver setup use a solid load balancer with TLS-termination in front of your service nodes
 
 
 Usage
@@ -37,7 +43,7 @@ To run service2https:
   * set the environment variables in a different way
 * start the configuration
     ```
-    . service2https-docker-compose.env
+    .      service2https-docker-compose.env
     sudo ./service2https-docker-compose.sh up
     ```
   you can also add `-d` to run in daemon mode (see all options with `./service2https-docker-compose.sh up --help`)
@@ -52,4 +58,10 @@ Further Information
 Links:
 * [Using docker-compose With Private Repositories](https://www.baeldung.com/linux/docker-compose-private-repositories)
 
+
+
+Feedback/Contact
+----------------
+
+chris at aisbreaker  org
 
