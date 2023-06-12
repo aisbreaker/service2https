@@ -34,10 +34,10 @@ Limitations
 Usage
 -----
 To run service2https:
-* download [service2https-docker-compose.sh](https://raw.githubusercontent.com/aisbreaker/service2https/main/service2https-docker-compose.sh]
+* download [service2https-docker-compose.sh](https://raw.githubusercontent.com/aisbreaker/service2https/main/service2https-docker-compose.sh)
 * set your configuration in environment variables, e.g. as follows:
   * use an `.env` file
-    * download [service2https-docker-compose.env](https://raw.githubusercontent.com/aisbreaker/service2https/main/service2https-docker-compose.env]
+    * download [service2https-docker-compose.env](https://raw.githubusercontent.com/aisbreaker/service2https/main/service2https-docker-compose.env)
     * modify the entries
     * load it, e.g. with `. ./service2https-docker-compose.env`
   * set the environment variables in a different way
