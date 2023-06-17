@@ -17,6 +17,9 @@
 # Set default values if env variable is not set
 #####
 
+# load specific configuration if the file exits
+FILE=./service2https-docker-compose.env && test -f $FILE && source $FILE
+
 # Docker image of the service - DEFAULTS
 export SERVICEIMAGE="${SERVICEIMAGE:=nginxdemos/hello:latest}"
 export SERVICEIMAGE_PORT="${SERVICEIMAGE_PORT:=80}"
